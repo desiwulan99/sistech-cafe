@@ -93,7 +93,7 @@ export default function MenuPage() {
       </div>
 
       {isOpen && (
-        <div className="fixed inset-0 md:left-auto md:w-80 bg-white shadow-2xl border-l border-pink-200 p-6 z-50 overflow-y-auto">
+        <div className="fixed inset-0 top-[80px] md:top-0 md:left-auto md:w-80 bg-white shadow-2xl border-l border-pink-200 p-6 z-50 overflow-y-auto">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-2xl font-bold text-pink-600">Keranjang</h2>
             <button onClick={toggleCart} className="text-gray-500 font-bold p-2 bg-gray-50 rounded-lg">Tutup</button>
