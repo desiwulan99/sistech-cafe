@@ -47,7 +47,7 @@ export default function AboutSection() {
               </p>
               <p>
                 Every cup brings the authentic taste of Indonesian coffee and the inspiring story of the women behind it. 
-                At Sistech Cafe, enjoy locally sourced coffee, handcrafted drinks, and a welcoming atmosphere—perfect 
+                At Sistech Cafe, enjoy locally sourced coffee, handcrafted drinks, and a welcoming atmosphere perfect 
                 for meeting friends, working, or simply relaxing.
               </p>
             </div>
