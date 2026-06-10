@@ -41,34 +41,46 @@ export default function MenuPage() {
   const { addToCart, total, cart, isOpen, toggleCart } = useCart();
 
   return (
-    <div className="min-h-screen bg-[#FAF9F6] flex">
-      <div className={`flex-grow py-10 px-6 transition-all duration-300 ${isOpen ? 'mr-80' : ''}`}>
+    <div className="min-h-screen bg-[#FAF9F6] flex relative">
+      {isOpen && (
+        <div 
+          className="fixed inset-0 bg-black/20 z-40 md:hidden" 
+          onClick={toggleCart}
+        />
+      )}
+
+      <div className={`flex-grow py-10 px-4 md:px-6 transition-all duration-300 ${isOpen ? 'md:mr-80' : ''}`}>
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-black text-center text-pink-600 mb-6">
+          <h1 className="text-4xl md:text-7xl font-black text-center text-pink-600 mb-6">
             Our Menu
           </h1>
-          <p className="text-center text-gray-500 text-xl font-medium mb-12">
+          <p className="text-center text-gray-500 text-lg md:text-xl font-medium mb-12">
             Handcrafted with love for your perfect day
           </p>
 
           {categories.map((category) => (
             <div key={category.title} className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-800 mb-10 border-l-8 border-pink-400 pl-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8 border-l-8 border-pink-400 pl-4 md:pl-6">
                 {category.title}
               </h2>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6">
                 {category.items.map((item) => (
-                  <div key={item.id} className="bg-white p-4 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 border border-pink-100 flex flex-col">
-                    <div className="relative w-full aspect-square mb-4 overflow-hidden rounded-[1.5rem]">
-                      <Image src={item.image} alt={item.name} fill className="object-cover hover:scale-105 transition duration-500" />
+                  <div key={item.id} className="bg-white p-3 md:p-4 rounded-[1.5rem] shadow-sm border border-pink-100 flex flex-col hover:shadow-md transition-shadow">
+                    <div className="relative w-full aspect-square mb-3 overflow-hidden rounded-[1.25rem]">
+                      <Image 
+                        src={item.image} 
+                        alt={item.name} 
+                        fill 
+                        className="object-cover hover:scale-105 transition duration-500" 
+                      />
                     </div>
-                    <div className="text-center px-2 flex-grow">
-                      <h2 className="font-bold text-gray-800 text-lg leading-tight mb-1">{item.name}</h2>
-                      <p className="text-pink-500 font-bold mb-4">{item.price}</p>
+                    <div className="text-center px-1 flex-grow">
+                      <h2 className="font-bold text-gray-800 text-sm md:text-base leading-tight mb-1 line-clamp-1">{item.name}</h2>
+                      <p className="text-pink-500 font-bold text-sm mb-3">{item.price}</p>
                     </div>
                     <button
                       onClick={() => addToCart(item)}
-                      className="w-full py-3 bg-pink-500 text-white font-bold rounded-full hover:bg-pink-600 transition duration-300"
+                      className="w-full py-2 bg-pink-500 text-white font-bold rounded-full hover:bg-pink-600 transition duration-300 text-sm"
                     >
                       Add +
                     </button>
@@ -81,10 +93,10 @@ export default function MenuPage() {
       </div>
 
       {isOpen && (
-        <div className="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl border-l border-pink-200 p-6 z-50 overflow-y-auto">
+        <div className="fixed inset-0 md:left-auto md:w-80 bg-white shadow-2xl border-l border-pink-200 p-6 z-50 overflow-y-auto">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-2xl font-bold text-pink-600">Keranjang</h2>
-            <button onClick={toggleCart} className="text-gray-500 font-bold">Tutup</button>
+            <button onClick={toggleCart} className="text-gray-500 font-bold p-2 bg-gray-50 rounded-lg">Tutup</button>
           </div>
 
           <div className="space-y-4">
@@ -93,15 +105,15 @@ export default function MenuPage() {
             ) : (
               cart.map((item, index) => (
                 <div key={index} className="flex justify-between items-center border-b pb-2">
-                  <span className="font-medium text-gray-700">{item.name}</span>
-                  <span className="text-pink-500 font-bold">Rp {item.numericPrice.toLocaleString()}</span>
+                  <span className="font-medium text-gray-700 text-sm">{item.name}</span>
+                  <span className="text-pink-500 font-bold text-sm">Rp {item.numericPrice.toLocaleString()}</span>
                 </div>
               ))
             )}
           </div>
 
           <div className="mt-10 border-t pt-6">
-            <h3 className="text-xl font-bold text-gray-800 flex justify-between">
+            <h3 className="text-lg font-bold text-gray-800 flex justify-between">
               Total: <span>Rp {total.toLocaleString('id-ID')}</span>
             </h3>
           </div>
