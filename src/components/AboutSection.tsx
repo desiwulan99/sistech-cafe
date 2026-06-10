@@ -40,9 +40,10 @@ export default function AboutSection() {
             </h2>
             <div className="text-lg text-gray-600 leading-relaxed text-justify space-y-8">
               <p>
-                <strong>Sistech Cafe</strong> is a cozy and welcoming place where you can relax, connect,
-                and enjoy delicious food and handcrafted drinks. Whether you are meeting friends, working,
-                studying, or simply taking a break, we invite you to experience a warm atmosphere designed for comfort and enjoyment.
+                <strong>Sistech Cafe</strong>  is a local coffee shop that serves local coffee with 
+                a warm and welcoming atmosphere. What makes it special is that the cafe is fully operated 
+                by talented and inspiring women who bring creativity, care, and teamwork into every part of the business.
+
               </p>
               <p>
                 Every cup brings the authentic taste of Indonesian coffee and the inspiring story of the women behind it. 
