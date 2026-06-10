@@ -23,7 +23,7 @@ export default function PromoPage() {
       title: "Student Special Day",
       description: "Study, sip, and save. Show your student ID and enjoy an exclusive discount on your order.",
       badge: "Student",
-      image: "/siswa.jpg",
+      image: "/student.jpg",
       color: "bg-blue-50"
     },
     {
