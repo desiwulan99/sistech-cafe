@@ -45,10 +45,9 @@ export default function AboutSection() {
                 studying, or simply taking a break, we invite you to experience a warm atmosphere designed for comfort and enjoyment.
               </p>
               <p>
-                Join us and make every visit a memorable experience filled with great flavors, handcrafted drinks,
-                friendly service, and a welcoming atmosphere. Whether you are spending time with friends,
-                working on your next idea, or simply taking a moment to relax, Sistech Cafe is the perfect place
-                to create moments worth sharing.
+                Every cup brings the authentic taste of Indonesian coffee and the inspiring story of the women behind it. 
+                At Sistech Cafe, enjoy locally sourced coffee, handcrafted drinks, and a welcoming atmosphere—perfect 
+                for meeting friends, working, or simply relaxing.
               </p>
             </div>
           </div>

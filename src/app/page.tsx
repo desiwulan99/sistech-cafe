@@ -21,10 +21,10 @@ export default function HomePage() {
             className="text-6xl md:text-8xl font-bold text-white mb-6 tracking-tight"
             style={{ textShadow: "2px 2px 8px rgba(0, 0, 0, 0.8)" }}
           >
-            Best Coffee & Stories
+            SISTECH CAFE
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-10 max-w-lg mx-auto font-light">
-            Create moments of togetherness with special dishes.
+            Local Coffe brewed by Extraordinary Women in Indonesia
           </p>
 
           <Link
