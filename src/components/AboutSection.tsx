@@ -56,7 +56,7 @@ export default function AboutSection() {
 
         <div className="mb-20">
           <h3 className="text-pink-500 font-black tracking-[0.1em] uppercase text-3xl text-center mb-12">
-            Ulasan Pelanggan
+            Customer Reviews
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {reviews.map((rev, i) => (
